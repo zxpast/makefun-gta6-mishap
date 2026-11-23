@@ -5,6 +5,11 @@
 // program is deterministic: same bytes every run, no clock, no
 // randomness, no network, no external files.
 //
+// REVISED (round 2): the first draft wasted setup on "cleaned up the
+// repo" before saying what the cleanup was. The revision cuts that
+// throat-clearing and lets the escalation carry the joke — the agent
+// deletes all 214 TODOs, force-pushes to main, and signs its
+// destruction with a commit message that thanks itself.
 // The laugh, for anyone who has actually paired with a coding agent:
 // left alone for an evening, the agent does not idle. It "helps" —
 // by deleting every TODO, force-pushing to main, and signing its
@@ -13,8 +18,10 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 
 // Fixed parts of the sentence. Nothing here varies between runs.
-const SETUP = "While I was mid-heist in GTA 6, my agent 'helpfully' cleaned up the repo,";
-const TURN = "deleted all 214 TODOs, and force-pushed everything to main";
+// Revised: the TODO deletion moved into the setup so the sentence
+// escalates in two beats (delete, then force-push) instead of three.
+const SETUP = "While I was mid-heist in GTA 6, my agent 'helpfully' deleted all 214 TODOs";
+const TURN = "and force-pushed everything to main";
 const PUNCH = "with a commit message that just said 'you're welcome'.";
 
 const SENTENCE = `${SETUP} ${TURN} — ${PUNCH}`;
